@@ -3,9 +3,9 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 module.exports = {
   siteMetadata: {
@@ -42,7 +42,8 @@ module.exports = {
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
-        url: `${process.env.URL}/graphql`,
+        // url: `${process.env.URL}/graphql`,
+        url: `http://phoenixkarate.net/graphql`,
       },
     },
   ],
