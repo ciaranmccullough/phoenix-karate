@@ -17,6 +17,7 @@
     "@wordpress/block-library": "^2.24.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.63",
+    "gatsby-plugin-config": "^1.0.7",
     "gatsby-plugin-manifest": "^2.4.32",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sass": "^2.3.13",
