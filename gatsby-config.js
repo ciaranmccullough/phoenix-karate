@@ -1,7 +1,6 @@
-// Initialize dotenv
-// require("dotenv").config({
-//   path: `.env.${process.env.NODE_ENV}`, // or '.env'
-// })
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 // And then you can use the config in gatsby-config.js
 // const config = require("gatsby-plugin-config").default
@@ -23,12 +22,18 @@ module.exports = {
       resolve: `gatsby-transformer-sharp`,
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto`],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
-        // url: `${process.env.URL}/graphql`,
-        url: `http://phoenixkarate.net/graphql`,
+        url: `${process.env.GATSBY_API_URL}/graphql`,
       },
     },
   ],

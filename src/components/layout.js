@@ -1,49 +1,16 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import Header from "./header"
+import Footer from "./footer"
 
 import "@wordpress/block-library/build-style/style.css"
 import "../styles/styles.scss"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      wpgraphql {
-        generalSettings {
-          title
-          url
-        }
-        menu(id: "dGVybTo3MQ==") {
-          menuItems {
-            nodes {
-              id
-              url
-              label
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const { title, url } = data.wpgraphql.generalSettings
-  const items = data.wpgraphql.menu.menuItems.nodes.map(item => ({
-    ...item,
-    url: item.url.replace(url, ""),
-  }))
-
   return (
     <>
-      <header>
-        <Link to="/" className="home">
-          {title}
-        </Link>
-        {items.map(item => (
-          <Link to={item.url} key={item.id}>
-            {item.label}
-          </Link>
-        ))}
-      </header>
+      <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
