@@ -352,21 +352,6 @@ main {
   }
   .wp-block-columns {
     margin: 0 50px 50px 50px;
-
-    .wp-block-column {
-      background-color: $prussian-blue;
-      color: $text-light;
-      box-shadow: $box-shadow;
-      border-radius: $border-radius;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h2 {
-        text-align: center;
-        color: $imperial-red;
-      }
-    }
   }
   .wp-block-table {
     margin: 0 50px;
@@ -380,6 +365,82 @@ main {
   .wp-block-gallery {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+  }
+  .feature-column {
+    background-color: $prussian-blue;
+    color: $text-light;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-align: center;
+      color: $imperial-red;
+    }
+    strong {
+      color: $imperial-red;
+    }
+  }
+  .wp-block-gallery {
+    .blocks-gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 3rem auto;
+      max-width: 950px;
+      justify-content: center;
+    }
+  }
+  .contact-card {
+    margin: 20px 50px;
+  }
+  form {
+    background-color: $prussian-blue;
+    padding: 20px;
+    margin: 30px 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  }
+  form .wpcf7-form-control {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  form .wpcf7-submit {
+    background-color: $imperial-red;
+    color: #fff;
+    border-color: $imperial-red;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .wp-image-9294 {
+    border: 1px solid black;
+  }
+  .biography-card {
+    margin: 20px 50px;
+    background-color: $celadon-blue;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    .blocks-gallery-grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .blocks-gallery-item {
+        width: 100%;
+      }
+    }
   }
 }
 

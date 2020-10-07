@@ -7,7 +7,7 @@ const GlobalFooter = styled.footer`
   justify-content: space-between;
   background-color: #3498db;
   color: #fff;
-  padding: 1rem 3rem;
+  padding: 20px 50px;
 `
 
 const Para = styled.p`
