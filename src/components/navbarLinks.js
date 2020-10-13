@@ -5,6 +5,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 const NavItem = styled(Link)`
   text-decoration: none;
   color: #fff;
+  font-weight: bold;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;

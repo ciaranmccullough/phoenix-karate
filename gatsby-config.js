@@ -22,6 +22,9 @@ module.exports = {
       resolve: `gatsby-transformer-sharp`,
     },
     {
+      resolve: `gatsby-plugin-fontawesome-css`,
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Roboto`],

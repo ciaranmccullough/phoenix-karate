@@ -253,7 +253,7 @@ ul.typographic {
 
 // Custom CSS
 
-// Mobile & General Styles
+// General Styles
 
 main {
   h1 {
@@ -268,7 +268,7 @@ main {
   .wp-block-cover {
     width: inherit;
     padding: 60px;
-    .wp-image-9183 {
+    .wp-image-9405 {
       animation: bounce-in-top 1.1s both;
     }
   }
@@ -295,27 +295,30 @@ main {
       padding: 0;
     }
   }
-  // .wp-block-group {
-  //   margin: 0 50px;
-  // }
   .wp-block-group h2 {
     padding: 20px 50px;
   }
-  .wp-block-media-text {
-    margin: 50px;
-    background-color: $celadon-blue;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-    .wp-block-media-text__media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .wp-image-8569 {
-        height: 90%;
-        width: 90%;
-        display: flex;
-        padding: $padding;
-        border-radius: 999px;
+
+  .testimonial-block {
+    margin: 0 50px;
+    h2 {
+      margin: 0;
+      color: $prussian-blue;
+    }
+    .alignwide {
+      margin: 0 auto;
+      max-width: 950px;
+    }
+    .wp-block-columns {
+      margin: 0 0 50px 0;
+      strong {
+        color: $imperial-red;
+      }
+      .is-style-rounded {
+        transition: all 0.2s ease-in-out;
+      }
+      .is-style-rounded:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -348,11 +351,30 @@ main {
     }
     .wp-block-group__inner-container {
       padding: 10px 0;
+      .wp-block-column p {
+        margin: 0;
+      }
     }
   }
   .wp-block-columns {
     margin: 0 50px 50px 50px;
+    .wp-block-column {
+      h2 {
+        word-break: normal;
+      }
+      p {
+        margin: 10px 40px;
+      }
+      a {
+        text-decoration: underline;
+      }
+      a:hover {
+        color: goldenrod;
+        transition: all 200ms ease-in;
+      }
+    }
   }
+
   .wp-block-table {
     margin: 0 50px;
     table {
@@ -374,7 +396,7 @@ main {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     h2 {
       text-align: center;
       color: $imperial-red;
@@ -384,12 +406,23 @@ main {
     }
   }
   .wp-block-gallery {
+    padding: 2rem;
+    max-width: 950px;
+    margin: 0 auto;
     .blocks-gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 3rem auto;
-      max-width: 950px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 1rem;
+      grid-auto-flow: dense;
+      .blocks-gallery-item {
+        height: 100%;
+        width: 100%;
+        figure {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
   .contact-card {
@@ -399,254 +432,74 @@ main {
     background-color: $prussian-blue;
     padding: 20px;
     margin: 30px 50px;
-    border-radius: 10px;
+    min-width: 350px;
+    max-width: 950px;
+    border-radius: $border-radius;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
+
+    box-shadow: $box-shadow;
   }
   form .wpcf7-form-control {
     margin: 5px 0;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: $border-radius;
   }
   form .wpcf7-submit {
     background-color: $imperial-red;
     color: #fff;
     border-color: $imperial-red;
-    border-radius: 10px;
+    border-radius: $border-radius;
     padding: 10px;
   }
   .wp-image-9294 {
     border: 1px solid black;
   }
   .biography-card {
-    margin: 20px 50px;
-    background-color: $celadon-blue;
+    margin: 30px 50px;
   }
 }
 
-@media screen and (max-width: 480px) {
+// Media Quires Tablets
+
+@media screen and (max-width: 781px) {
   main {
-    .blocks-gallery-grid {
+    .wp-block-columns {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .blocks-gallery-item {
-        width: 100%;
+      .wp-block-column {
+        margin-left: 0;
+        margin-bottom: 50px;
       }
     }
   }
 }
 
-// .wp-block-table table {
-//   border: 5px solid $celadon-blue;
-//   border-radius: 10px;
-// }
-// .wp-block-table tr,
-// th,
-// td {
-//   padding: 10px;
-// }
+// Media Quires Phones
 
-// html,
-// body {
-//   margin: 0;
-//
-//   background-color: $honeydew;
-// }
-
-// header {
-//   .home {
-//     font-weight: 800;
-//     margin-left: 0;
-//     text-decoration: none;
-//   }
-// }
-
-// main {
-// .wp-block-cover__gradient-background {
-//   width: 100%;
-// }
-// .wp-block-pullquote {
-//   padding: 0;
-// }
-
-// .wp-block-image .alignleft > figcaption {
-//   display: none;
-// }
-
-// .wp-image-8569 {
-//   -webkit-animation: bounce-in-top 1.1s both;
-//   animation: bounce-in-top 1.1s both;
-//   height: 250px;
-//   width: 250px;
-// }
-// .wp-block-media-text {
-//   background-color: $prussian-blue;
-//   color: #fff;
-//   padding: 10px;
-//   border-radius: 10px;
-//   margin-bottom: 10px;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .wp-block-media-text strong {
-//   color: $imperial-red;
-// }
-
-// .hero .has-text-align-left {
-//   text-align: center;
-// }
-
-// .wp-block-column {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
-// .action-card {
-//   background-color: $powder-blue;
-//   border-radius: 10px;
-//   webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-// }
-
-// .about-block {
-//   background-color: $powder-blue;
-//   margin: 30px 0;
-//   border-radius: 10px;
-//   padding: 0 10px;
-//   webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-// }
-// .mission-statement {
-//   background-color: $imperial-red;
-//   color: white;
-//   border-radius: 10px;
-//   webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   padding: 10px;
-//   margin: 20px;
-// }
-
-// .about-block .wp-block-column {
-//   justify-content: flex-start;
-//   align-items: flex-start;
-// }
-
-// .wp-block-cover strong {
-//   -webkit-animation: swirl-in-fwd 0.6s ease-out both;
-//   animation: swirl-in-fwd 0.6s ease-out both;
-// }
-
-// margin-right: auto; /* 1 */
-// margin-left: auto; /* 1 */
-
-// max-width: 960px; /* 2 */
-
-// padding-right: 10px; /* 3 */
-// padding-left: 10px; /* 3 */
-
-// margin: 3rem auto;
-// margin-top: 0;
-// max-width: 75ch;
-// width: 90vw;
-// display: flex;
-// flex-direction: column;
-
-// .wp-block-group .content-contatiner {
-//   margin: 10px 10px 10px 20px;
-// }
-
-// .wp-block-group__inner-container {
-//   margin: 10px 10px 10px 40px;
-//   padding: 10px;
-//   border-radius: 10px;
-// }
-// .wp-block-image {
-//   margin: 0;
-// }
-
-// .wp-block-button__link {
-//   background-color: $imperial-red;
-// }
-
-// form {
-//   background-color: #3498db;
-//   padding: 20px;
-//   margin: 30px;
-//   border-radius: 10px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   justify-content: flex-start;
-//   webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-//   box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
-// }
-// form .wpcf7-form-control {
-//   margin: 5px 0;
-//   padding: 5px;
-//   border-radius: 10px;
-// }
-// form .wpcf7-submit {
-//   background-color: $imperial-red;
-//   color: #fff;
-//   border-color: $imperial-red;
-//   border-radius: 10px;
-//   padding: 10px;
-// }
-
-// .wp-block-table table {
-//   border: 5px solid $celadon-blue;
-//   border-radius: 10px;
-// }
-// .blocks-gallery-grid {
-//   user-drag: none;
-//   user-select: none;
-//   pointer-events: none;
-// }
-
-// .wp-block-table tr,
-// th,
-// td {
-//   padding: 10px;
-// }
-// .address-column {
-//   border: 5px solid $celadon-blue;
-//   padding: 10px;
-//   border: 5px solid $imperial-red;
-//   border-radius: 10px;
-//   background-color: $prussian-blue;
-//   color: #fff;
-//   align-items: flex-start;
-// }
-// .address-column p {
-//   align-items: flex-start;
-// }
-//   .feature-column {
-//     justify-content: flex-start;
-//     border: 5px solid $imperial-red;
-//     background-color: $prussian-blue;
-//     color: #fff;
-//     border-radius: 10px;
-//   }
-// }
-
-// footer {
-//   background-color: #3498db;
-
-//   p {
-//     margin: 0;
-//     height: 50px;
-//   }
-// }
+@media screen and (max-width: 480px) {
+  main {
+    .instructor-header {
+      margin: 0 auto;
+    }
+    .wp-block-group {
+      h2 {
+        margin: 0 auto;
+      }
+      .wp-block-image {
+        margin: 0 auto;
+      }
+      p {
+        margin: 0 auto;
+      }
+      .wp-block-columns {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .footer-logo {
+    display: none;
+  }
+}
