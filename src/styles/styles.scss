@@ -425,35 +425,7 @@ main {
       }
     }
   }
-  .contact-card {
-    margin: 20px 50px;
-  }
-  form {
-    background-color: $prussian-blue;
-    padding: 20px;
-    margin: 30px 50px;
-    min-width: 350px;
-    max-width: 950px;
-    border-radius: $border-radius;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
 
-    box-shadow: $box-shadow;
-  }
-  form .wpcf7-form-control {
-    margin: 5px 0;
-    padding: 5px;
-    border-radius: $border-radius;
-  }
-  form .wpcf7-submit {
-    background-color: $imperial-red;
-    color: #fff;
-    border-color: $imperial-red;
-    border-radius: $border-radius;
-    padding: 10px;
-  }
   .wp-image-9294 {
     border: 1px solid black;
   }
