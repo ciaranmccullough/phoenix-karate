@@ -17,8 +17,8 @@ const PageTemplate = ({ data }) => {
   const page = data.wpgraphql.page
   return (
     <Layout>
-      <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
-      <div dangerouslySetInnerHTML={{ __html: page.content }} />
+      {/* <h1 dangerouslySetInnerHTML={{ __html: page.title }} />
+      <div dangerouslySetInnerHTML={{ __html: page.content }} /> */}
     </Layout>
   )
 }

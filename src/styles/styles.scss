@@ -475,3 +475,28 @@ main {
     display: none;
   }
 }
+
+// Under Construction Page
+.uc-container {
+  background-color: $celadon-blue;
+  color: $text-light;
+  height: 100vh;
+  width: 100vw;
+  padding: 50px;
+
+  .uc-logo {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 20px;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+  }
+  img {
+  }
+}
