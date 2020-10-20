@@ -77,6 +77,24 @@ const Label = styled.label`
   margin-top: 1.5rem;
   width: 100%;
 `
+
+const Select = styled.select`
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 0.75rem;
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+`
+
 const Input = styled(Field)`
   background-color: white;
   border: 1px solid lightgrey;
@@ -342,7 +360,7 @@ const BookingForm = () => {
 
             <FormRow>
               <Label htmlFor="session">Book Session: </Label>
-              <Input as="select" name="session">
+              <Select name="session">
                 <option value="none">none</option>
                 <option
                   value="Monday-5pm(Childrens-beginners)"
@@ -380,12 +398,12 @@ const BookingForm = () => {
                 >
                   Wednesdays-7pm(Childrens-brown)
                 </option>
-                <oname
+                <option
                   value="Fridays-6pm(Childrens-white/purple) "
                   name="Fridays-6pm(Childrens-white/purple)"
                 >
                   Fridays-6pm(Childrens-white/purple)
-                </oname>
+                </option>
                 <option
                   value="Fridays-7pm(Childrens-green/brown) "
                   name="Fridays-7pm(Childrens-green/brown)"
@@ -404,12 +422,12 @@ const BookingForm = () => {
                 >
                   Saturdays-2pm(Childrens-green/brown)
                 </option>
-                <oname
+                <option
                   value="Sundays-11am(Childrens-white/purple) "
                   name="Sundays-11am(Childrens-white/purple)"
                 >
                   Sundays-11am(Childrens-white/purple)
-                </oname>
+                </option>
                 <option
                   value="Sundays-12-15pm(Childrens-green/brown(red-stripe)) "
                   name="Sundays-12-15pm(Childrens-green/brown(red-stripe))"
@@ -428,7 +446,7 @@ const BookingForm = () => {
                 >
                   Wednesdays-7-30pm(Adults)
                 </option>
-              </Input>
+              </Select>
               <ErrorMessage name="session">
                 {msg => (
                   <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
