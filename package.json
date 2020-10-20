@@ -14,13 +14,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/pickers": "^3.2.10",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@material-ui/styles": "^4.10.0",
     "@wordpress/block-library": "^2.24.0",
-    "bulma": "^0.9.1",
     "dotenv": "^8.2.0",
+    "formik": "^2.2.0",
     "formik-material-ui": "^3.0.0",
     "formik-material-ui-lab": "^0.0.7",
     "formik-material-ui-pickers": "^0.0.11",
@@ -46,12 +46,7 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "babel-plugin-styled-components": "^1.11.1",
-    "formik": "^2.2.0",
     "gatsby-plugin-styled-components": "^3.3.12",
     "prettier": "2.1.1",
     "styled-components": "^5.2.0"
