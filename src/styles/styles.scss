@@ -262,7 +262,8 @@ main {
     margin: 0;
     padding: 10px 50px;
   }
-  h2 {
+  h2,
+  h3 {
     margin: 20px 50px;
   }
   .wp-block-cover {
@@ -378,7 +379,7 @@ main {
   .wp-block-table {
     margin: 0 50px;
     table {
-      border: 5px solid $imperial-red;
+      border: 5px solid $celadon-blue;
       td {
         padding: 10px;
       }
@@ -432,6 +433,15 @@ main {
   .biography-card {
     margin: 30px 50px;
   }
+  .contact-group {
+    margin: 50px;
+    .bottom-paragraph {
+      margin-bottom: 50px;
+    }
+  }
+  // .instagram-container {
+  //   margin: 0 50px;
+  // }
 }
 
 // Media Quires Tablets
@@ -445,6 +455,10 @@ main {
         margin-left: 0;
         margin-bottom: 50px;
       }
+    }
+    .instagram-container,
+    .instagram-heading {
+      display: none;
     }
   }
 }
@@ -476,27 +490,38 @@ main {
   }
 }
 
-// Under Construction Page
-.uc-container {
-  background-color: $celadon-blue;
-  color: $text-light;
-  height: 100vh;
-  width: 100vw;
-  padding: 50px;
-
-  .uc-logo {
-    height: 250px;
-    width: 250px;
-    margin-bottom: 20px;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    pointer-events: none;
-    -webkit-user-select: none; /* Chrome all / Safari all */
-    -moz-user-select: none; /* Firefox all */
-    -ms-user-select: none; /* IE 10+ */
-    -o-user-select: none;
-    user-select: none;
-  }
-  img {
-  }
+// Form Styles
+.MuiFormLabel-root,
+.MuiButtonBase-root,
+.MuiInputBase-input {
+  font-size: 2rem;
 }
+
+.MuiFormHelperText-root {
+  font-size: 1.5rem;
+}
+
+// Under Construction Page
+// .uc-container {
+//   background-color: $celadon-blue;
+//   color: $text-light;
+//   height: 100vh;
+//   width: 100vw;
+//   padding: 50px;
+
+//   .uc-logo {
+//     height: 250px;
+//     width: 250px;
+//     margin-bottom: 20px;
+//     -webkit-user-select: none;
+//     -webkit-touch-callout: none;
+//     pointer-events: none;
+//     -webkit-user-select: none; /* Chrome all / Safari all */
+//     -moz-user-select: none; /* Firefox all */
+//     -ms-user-select: none; /* IE 10+ */
+//     -o-user-select: none;
+//     user-select: none;
+//   }
+//   img {
+//   }
+// }

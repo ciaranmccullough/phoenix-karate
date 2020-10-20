@@ -14,15 +14,22 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/styles": "^4.10.0",
     "@wordpress/block-library": "^2.24.0",
     "bulma": "^0.9.1",
     "dotenv": "^8.2.0",
+    "formik-material-ui": "^3.0.0",
+    "formik-material-ui-lab": "^0.0.7",
+    "formik-material-ui-pickers": "^0.0.11",
     "gatsby": "^2.24.63",
     "gatsby-background-image": "^1.1.2",
     "gatsby-plugin-config": "^1.0.7",
     "gatsby-plugin-fontawesome-css": "^1.0.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.32",
+    "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sass": "^2.3.13",
@@ -33,7 +40,8 @@
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
