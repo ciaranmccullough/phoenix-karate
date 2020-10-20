@@ -344,46 +344,88 @@ const BookingForm = () => {
               <Label htmlFor="session">Book Session: </Label>
               <Input as="select" name="session">
                 <option value="none">none</option>
-                <option value="Monday-5pm(Childrens-beginners)">
+                <option
+                  value="Monday-5pm(Childrens-beginners)"
+                  name="Monday-5pm(Childrens-beginners)"
+                >
                   Monday-5pm(Childrens-beginners)
                 </option>
-                <option value="Monday-6pm(Childrens-purple/green)">
+                <option
+                  value="Monday-6pm(Childrens-purple/green)"
+                  name="Monday-6pm(Childrens-purple/green)"
+                >
                   Monday-6pm(Childrens-purple/green)
                 </option>
-                <option value="Monday-7-30pm(Childrens-brown)">
+                <option
+                  value="Monday-7-30pm(Childrens-brown)"
+                  name="Monday-7-30pm(Childrens-brown)"
+                >
                   Monday-7-30pm(Childrens-brown)
                 </option>
-                <option value="Wednesdays-5pm(Childrens-white/purple)">
+                <option
+                  value="Wednesdays-5pm(Childrens-white/purple)"
+                  name="Wednesdays-5pm(Childrens-white/purple)"
+                >
                   Wednesdays-5pm(Childrens-white/purple)
                 </option>
-                <option value="Wednesdays-6pm(Childrens-green)">
+                <option
+                  value="Wednesdays-6pm(Childrens-green) "
+                  name="Wednesdays-6pm(Childrens-green)"
+                >
                   Wednesdays-6pm(Childrens-green)
                 </option>
-                <option value="Wednesdays-7pm(Childrens-brown)">
+                <option
+                  value="Wednesdays-7pm(Childrens-brown) "
+                  name="Wednesdays-7pm(Childrens-brown)"
+                >
                   Wednesdays-7pm(Childrens-brown)
                 </option>
-                <option value="Fridays-6pm(Childrens-white/purple)">
+                <oname
+                  value="Fridays-6pm(Childrens-white/purple) "
+                  name="Fridays-6pm(Childrens-white/purple)"
+                >
                   Fridays-6pm(Childrens-white/purple)
-                </option>
-                <option value="Fridays-7pm(Childrens-green/brown)">
+                </oname>
+                <option
+                  value="Fridays-7pm(Childrens-green/brown) "
+                  name="Fridays-7pm(Childrens-green/brown)"
+                >
                   Fridays-7pm(Childrens-green/brown)
                 </option>
-                <option value="Saturdays-1pm(Childrens-white/purple)">
+                <option
+                  value="Saturdays-1pm(Childrens-white/purple) "
+                  name="Saturdays-1pm(Childrens-white/purple)"
+                >
                   Saturdays-1pm(Childrens-white/purple)
                 </option>
-                <option value="Saturdays-2pm(Childrens-green/brown)">
+                <option
+                  value="Saturdays-2pm(Childrens-green/brown) "
+                  name="Saturdays-2pm(Childrens-green/brown)"
+                >
                   Saturdays-2pm(Childrens-green/brown)
                 </option>
-                <option value="Sundays-11am(Childrens-white/purple)">
+                <oname
+                  value="Sundays-11am(Childrens-white/purple) "
+                  name="Sundays-11am(Childrens-white/purple)"
+                >
                   Sundays-11am(Childrens-white/purple)
-                </option>
-                <option value="Sundays-12-15pm(Childrens-green/brown(red-stripe))">
+                </oname>
+                <option
+                  value="Sundays-12-15pm(Childrens-green/brown(red-stripe)) "
+                  name="Sundays-12-15pm(Childrens-green/brown(red-stripe))"
+                >
                   Sundays-12-15pm(Childrens-green/brown(red-stripe))
                 </option>
-                <option value="Mondays-7-30pm(Adults-brown)">
+                <option
+                  value="Mondays-7-30pm(Adults-brown)"
+                  name="Mondays-7-30pm(Adults-brown)"
+                >
                   Mondays-7-30pm(Adults-brown)
                 </option>
-                <option value="Wednesdays-7-30pm(Adults)">
+                <option
+                  value="Wednesdays-7-30pm(Adults)"
+                  name="Wednesdays-7-30pm(Adults)"
+                >
                   Wednesdays-7-30pm(Adults)
                 </option>
               </Input>
