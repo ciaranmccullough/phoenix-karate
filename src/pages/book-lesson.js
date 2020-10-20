@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import BookingForm from "../components/form"
+import BookingForm from "../components/form/form"
 // import { Formik, Form, Field, ErrorMessage } from "formik"
 
 const Container = styled.div`

@@ -31,6 +31,7 @@ module.exports = {
         display: "swap",
       },
     },
+
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
