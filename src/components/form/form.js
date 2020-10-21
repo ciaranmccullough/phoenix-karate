@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import styled, { css } from "styled-components"
 
@@ -214,33 +214,6 @@ const Submit = styled.button`
     }
   }
 `
-
-// const useStyles = makeStyles(theme => ({
-//   card: {
-//     minWidth: "400px",
-//     maxWidth: "950px",
-//     margin: "20px 0",
-//     padding: "20px",
-//     backgroundColor: " #f9f9f9",
-//   },
-//   root: {
-//     display: "flex",
-//     fontSize: "2rem",
-//     flexDirection: "column",
-//     "& .MuiTextField-root": {
-//       margin: theme.spacing(2),
-//       width: "25ch",
-//     },
-//   },
-//   textArea: {
-//     width: "25ch",
-//     margin: "20px 0 20px 10px",
-//   },
-//   button: {
-//     width: "25ch",
-//     fontSize: "1.5rem",
-//   },
-// }))
 
 const BookingForm = () => {
   // Helper function to encode for Netlify
