@@ -334,7 +334,7 @@ const BookLesson = () => {
 
                 <FormRow>
                   <Label htmlFor="session">Book Session: </Label>
-                  <Select name="session" required="">
+                  <Input as="select" name="session" required="">
                     <option value="" disabled="" selected="">
                       none
                     </option>
@@ -393,7 +393,7 @@ const BookLesson = () => {
                     <option value="Mondays-1.30pm Brown belts and above ">
                       1.30pm Brown belts and above
                     </option>
-                  </Select>
+                  </Input>
                   <ErrorMessage name="session">
                     {msg => (
                       <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
