@@ -372,7 +372,7 @@ const BookLesson = () => {
           </select>
         </div>
         <div>
-          <submit type="submit">Submit</submit>
+          <button type="submit">Submit</button>
         </div>
       </form>
       <Container>
