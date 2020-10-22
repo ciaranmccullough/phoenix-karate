@@ -247,7 +247,7 @@ const BookLesson = () => {
             fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: encode({ "form-name": "contact-demo", ...values }),
+              body: encode({ "form-name": "contact", ...values }),
             })
               .then(() => {
                 alert("Success")
@@ -348,6 +348,7 @@ const BookLesson = () => {
                     </option> */}
                   <option value="Monday">5pm White belt Beginners</option>
                   <option value="Tuesday">5pm White belt Beginners</option>
+                  <option value="Wednesday">6pm</option>
                   {/* <option value="Monday-6pm Intermediates">
                       6pm Intermediates
                     </option>

@@ -301,12 +301,28 @@ main {
   }
   .about-image-block {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
     .wp-block-image img {
-      height: 300px;
+      width: 100%;
+      margin: 0;
     }
   }
-
+  .wp-block-image {
+    margin: 0;
+  }
+  .adult-image-block {
+    align-items: center;
+    position: block;
+    width: 100%;
+    margin: 0;
+  }
+  .children-class-image img {
+    position: block;
+    width: 100%;
+    margin: 0;
+  }
   .children-class-info-block,
   .adult-class-text {
     margin: 30px 50px;
@@ -352,9 +368,7 @@ main {
       padding: 20px;
     }
   }
-  .wp-block-image {
-    margin: 10px 50px;
-  }
+
   .about-block {
     background-color: $powder-blue;
     margin: 50px;
@@ -372,7 +386,7 @@ main {
       }
     }
   }
-  .wp-block-columns {
+  .address-block {
     margin: 0 50px 50px 50px;
     .wp-block-column {
       h2 {
@@ -404,23 +418,29 @@ main {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
   }
-  .feature-column {
-    background-color: $prussian-blue;
-    color: $text-light;
-    box-shadow: $box-shadow;
-    border-radius: $border-radius;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-    h2 {
-      text-align: center;
-      color: $imperial-red;
-    }
-    strong {
-      color: $imperial-red;
+  .features-benefits,
+  .feature-columns,
+  .address-block {
+    margin: 20px 50px 30px;
+    .feature-column {
+      background-color: $prussian-blue;
+      color: $text-light;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      h2 {
+        text-align: center;
+        color: $imperial-red;
+      }
+      strong {
+        color: $imperial-red;
+      }
     }
   }
+
   .wp-block-gallery {
     padding: 2rem;
     max-width: 950px;
@@ -486,9 +506,28 @@ main {
 
 @media screen and (max-width: 480px) {
   main {
+    justify-content: center;
     .instructor-header {
       margin: 0 auto;
     }
+    h2 {
+      margin: 0 25px;
+    }
+    .wp-block-table,
+    .address-block,
+    .adult-class-text,
+    .testimonial-block,
+    .mission-statement,
+    .about-block,
+    .features-benefits,
+    .children-class-info-block,
+    .about-block,
+    .features-block,
+    .biography-card,
+    .contact-group {
+      margin: 20px 25px;
+    }
+
     .wp-block-group {
       h2 {
         margin: 0 auto;
@@ -504,6 +543,7 @@ main {
       }
     }
   }
+
   .footer-logo {
     display: none;
   }
