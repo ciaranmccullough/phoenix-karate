@@ -232,11 +232,6 @@ const BookLesson = () => {
   }
 
   {
-    /* <option value="Monday">5pm White belt Beginners</option>
-                  <option value="Tuesday">5pm White belt Beginners</option>
-                  <option value="Wednesday">6pm</option> */
-  }
-  {
     /* <option value="Monday-6pm Intermediates">
                       6pm Intermediates
                     </option>
@@ -344,8 +339,41 @@ const BookLesson = () => {
   return (
     <Layout>
       <h1>Book A Session</h1>
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <div>
+          <label htmlFor="name">Name: </label>
+          <input
+            name="name"
+            // valid={touched.name && !errors.name}
+            // error={touched.name && errors.name}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email: </label>
+          <input
+            name="email"
+            // valid={touched.email && !errors.email}
+            // error={touched.email && errors.email}
+          />
+        </div>
+        <div>
+          <label htmlFor="sessions">Choose a session:</label>
+          <select name="session" id="session-select">
+            <option value="">--Please choose an option--</option>
+            <option value="Monday">Monday</option>
+            <option value="Wednesday">Wednesday</option>
+          </select>
+        </div>
+      </form>
       <Container>
-        <Formik
+        {/* <Formik
           initialValues={{
             name: "",
             email: "",
@@ -444,6 +472,16 @@ const BookLesson = () => {
                 </FormRow>
 
                 <Label htmlFor="session">Book Session: </Label>
+                <Input
+                  name="session"
+                  render={({ field }) => (
+                    <Select
+                      {...field}
+                      onChange={value => setFieldValue("session", value)}
+                      value={values.session}
+                    ></Select>
+                  )}
+                ></Input>
                 <Select name="session">
                   {dropdownOptions.map(option => {
                     return (
@@ -451,8 +489,8 @@ const BookLesson = () => {
                         {option.key}
                       </option>
                     )
-                  })}
-                  {/* <option value="" disabled="" selected="">
+                  })} */}
+        {/* <option value="" disabled="" selected="">
                       none
                     </option>
                     <option
@@ -463,10 +501,10 @@ const BookLesson = () => {
                     >
                       Monday
                     </option> */}
-                  {/* <option value="Monday">5pm White belt Beginners</option>
+        {/* <option value="Monday">5pm White belt Beginners</option>
                   <option value="Tuesday">5pm White belt Beginners</option>
                   <option value="Wednesday">6pm</option> */}
-                  {/* <option value="Monday-6pm Intermediates">
+        {/* <option value="Monday-6pm Intermediates">
                       6pm Intermediates
                     </option>
                     <option value="Monday-7.30 Adults">7.30 Adults</option>
@@ -510,7 +548,7 @@ const BookLesson = () => {
                     <option value="Mondays-1.30pm Brown belts and above ">
                       1.30pm Brown belts and above
                     </option> */}
-                </Select>
+        {/* </Select>
 
                 <FormRow>
                   <Label htmlFor="message">Message: </Label>
@@ -528,7 +566,7 @@ const BookLesson = () => {
               </Form>
             </PageWrapper>
           )}
-        </Formik>
+        </Formik> */}
       </Container>
     </Layout>
   )
