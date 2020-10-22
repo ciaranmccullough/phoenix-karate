@@ -297,12 +297,13 @@ main {
     }
   }
   .wp-block-group h2 {
-    padding: 20px 50px;
+    padding: 20px 0;
   }
-  .about-image-block {
-    display: flex;
-    justify-content: center;
-    padding: 0;
+  .about-image-block img {
+    position: block;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
     margin: 0;
     .wp-block-image img {
       width: 100%;
@@ -312,15 +313,18 @@ main {
   .wp-block-image {
     margin: 0;
   }
-  .adult-image-block {
-    align-items: center;
+  .adult-image-block img {
     position: block;
+    height: 100vh;
     width: 100%;
+    object-fit: cover;
     margin: 0;
   }
   .children-class-image img {
     position: block;
+    height: 100vh;
     width: 100%;
+    object-fit: cover;
     margin: 0;
   }
   .children-class-info-block,
@@ -385,6 +389,9 @@ main {
         margin: 0;
       }
     }
+  }
+  .instructor-block {
+    margin: 20px 50px;
   }
   .address-block {
     margin: 0 50px 50px 50px;
@@ -465,9 +472,7 @@ main {
   .wp-image-9294 {
     border: 1px solid black;
   }
-  .biography-card {
-    margin: 30px 50px;
-  }
+
   .contact-group {
     margin: 50px;
     .bottom-paragraph {
@@ -523,7 +528,7 @@ main {
     .children-class-info-block,
     .about-block,
     .features-block,
-    .biography-card,
+    .instructor-block,
     .contact-group {
       margin: 20px 25px;
     }
