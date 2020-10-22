@@ -8,10 +8,23 @@ const Container = styled.div`
   margin: 0 50px auto;
   display: flex;
   flex-direction: column;
+  @media (max-width: 480px) {
+    margin: 0 25px;
+  }
+`
+
+const InputForm = styled.form`
+  margin: 20px 0;
+  padding: 20px;
+  max-width: 950px;
+  min-width: 250px;
+  background-color: #b1c3c9;
+  border-radius: 10px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.75);
 `
 
 const FormRow = styled.div`
-  display: flex;
+  margin-bottom: 10px;
 `
 
 const PageWrapper = styled.section`
@@ -93,7 +106,7 @@ const Select = styled.select`
   }
 `
 
-const Input = styled(Field)`
+const Input = styled.input`
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 4px;
@@ -231,53 +244,6 @@ const BookLesson = () => {
       .join("&")
   }
 
-  {
-    /* <option value="Monday-6pm Intermediates">
-                      6pm Intermediates
-                    </option>
-                    <option value="Monday-7.30 Adults">7.30 Adults</option>
-                    <option value="" disabled="" selected="">
-                      Wednesday
-                    </option>
-                    <option value="Wednesdays-5pm White belt Beginners">
-                      5pm White belt Beginners
-                    </option>
-                    <option value="Wednesdays-6pm Intermediates">
-                      6pm Intermediates
-                    </option>
-                    <option value="Wednesdays-7pm Brown belts and above">
-                      7pm Brown belts and above
-                    </option>
-                    <option value="" disabled="" selected="">
-                      Friday
-                    </option>
-                    <option value="Fridays-6pm White belt Beginners ">
-                      6pm White belt Beginners
-                    </option>
-                    <option value="Fridays-7pm intermediates">
-                      7pm intermediates
-                    </option>
-                    <option value="" disabled="" selected="">
-                      Saturday
-                    </option>
-                    <option value="Saturdays-1pm Mixed">1pm Mixed</option>
-                    <option value="Saturdays-2pm Brown belts and above ">
-                      2pm Brown belts and above
-                    </option>
-                    <option value="" disabled="" selected="">
-                      Sunday
-                    </option>
-                    <option value="Sundays-11am White belt beginners">
-                      11am White belt beginners
-                    </option>
-                    <option value="Sundays-12.15 intermediates">
-                      12.15 intermediates
-                    </option>
-                    <option value="Mondays-1.30pm Brown belts and above ">
-                      1.30pm Brown belts and above
-                    </option> */
-  }
-
   const dropdownOptions = [
     { key: "Select an option", value: "" },
     { key: "Monday", value: "" },
@@ -339,44 +305,62 @@ const BookLesson = () => {
   return (
     <Layout>
       <h1>Book A Session</h1>
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="hidden" name="bot-field" />
-        <div>
-          <label htmlFor="name">Name: </label>
-          <input
-            name="name"
-            // valid={touched.name && !errors.name}
-            // error={touched.name && errors.name}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email: </label>
-          <input
-            name="email"
-            // valid={touched.email && !errors.email}
-            // error={touched.email && errors.email}
-          />
-        </div>
-        <div>
-          <label htmlFor="session">Choose a session:</label>
-          <select name="session" id="session-select">
-            <option value="">--Please choose an option--</option>
-            <option value="Monday">Monday</option>
-            <option value="Wednesday">Wednesday</option>
-          </select>
-        </div>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
       <Container>
-        {/* <Formik
+        <InputForm
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+          <FormRow>
+            <Label htmlFor="name">Name: </Label>
+            <Input
+              name="name"
+              // valid={touched.name && !errors.name}
+              // error={touched.name && errors.name}
+            />
+          </FormRow>
+          <FormRow>
+            <Label htmlFor="email">Email: </Label>
+            <Input
+              name="email"
+              // valid={touched.email && !errors.email}
+              // error={touched.email && errors.email}
+            />
+          </FormRow>
+          <FormRow>
+            <Label htmlFor="phone">Phone: </Label>
+            <Input
+              name="phone"
+              // valid={touched.email && !errors.email}
+              // error={touched.email && errors.email}
+            />
+          </FormRow>
+          <FormRow>
+            <Label htmlFor="session">Choose a session:</Label>
+            <Select name="session" id="session-select">
+              {dropdownOptions.map(option => {
+                return (
+                  <option key={option.value} value={option.value}>
+                    {option.key}
+                  </option>
+                )
+              })}
+            </Select>
+          </FormRow>
+          <FormRow>
+            <Label htmlFor="message">Message: </Label>
+            <Input name="message" />
+          </FormRow>
+          <FormRow>
+            <Submit type="submit">Submit</Submit>
+          </FormRow>
+        </InputForm>
+      </Container>
+
+      {/* <Formik
           initialValues={{
             name: "",
             email: "",
@@ -493,7 +477,7 @@ const BookLesson = () => {
                       </option>
                     )
                   })} */}
-        {/* <option value="" disabled="" selected="">
+      {/* <option value="" disabled="" selected="">
                       none
                     </option>
                     <option
@@ -504,10 +488,10 @@ const BookLesson = () => {
                     >
                       Monday
                     </option> */}
-        {/* <option value="Monday">5pm White belt Beginners</option>
+      {/* <option value="Monday">5pm White belt Beginners</option>
                   <option value="Tuesday">5pm White belt Beginners</option>
                   <option value="Wednesday">6pm</option> */}
-        {/* <option value="Monday-6pm Intermediates">
+      {/* <option value="Monday-6pm Intermediates">
                       6pm Intermediates
                     </option>
                     <option value="Monday-7.30 Adults">7.30 Adults</option>
@@ -551,7 +535,7 @@ const BookLesson = () => {
                     <option value="Mondays-1.30pm Brown belts and above ">
                       1.30pm Brown belts and above
                     </option> */}
-        {/* </Select>
+      {/* </Select>
 
                 <FormRow>
                   <Label htmlFor="message">Message: </Label>
@@ -570,7 +554,6 @@ const BookLesson = () => {
             </PageWrapper>
           )}
         </Formik> */}
-      </Container>
     </Layout>
   )
 }
