@@ -1,7 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-
-import { Formik, Form, Field, ErrorMessage } from "formik"
 import styled, { css } from "styled-components"
 
 const Container = styled.div`
@@ -61,29 +59,7 @@ const PageWrapper = styled.section`
     margin-right: 0;
   }
 `
-const CodeWrapper = styled.pre`
-  font-family: monospace;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  background-color: hsl(210, 4%, 96%);
-  overflow: auto;
-  padding: 0.75rem;
-  margin: 0;
-  border-radius: 4px;
 
-  & strong {
-    margin-top: 1.5rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-`
-const Title = styled.h1`
-  font-size: 1rem;
-  line-height: 1.25rem;
-  margin-top: 0;
-`
 const Label = styled.label`
   margin-top: 1.5rem;
   width: 100%;
