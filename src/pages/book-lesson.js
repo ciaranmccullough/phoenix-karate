@@ -335,7 +335,7 @@ const BookLesson = () => {
                 <FormRow>
                   <Label htmlFor="session">Book Session: </Label>
                   <Input as="select" name="session" required="">
-                    <option value="" disabled="" selected="">
+                    {/* <option value="" disabled="" selected="">
                       none
                     </option>
                     <option
@@ -345,11 +345,10 @@ const BookLesson = () => {
                       selected=""
                     >
                       Monday
-                    </option>
-                    <option value="Monday-5pm White belt Beginners">
-                      5pm White belt Beginners
-                    </option>
-                    <option value="Monday-6pm Intermediates">
+                    </option> */}
+                    <option value="Monday">5pm White belt Beginners</option>
+                    <option value="Tuesday">5pm White belt Beginners</option>
+                    {/* <option value="Monday-6pm Intermediates">
                       6pm Intermediates
                     </option>
                     <option value="Monday-7.30 Adults">7.30 Adults</option>
@@ -392,13 +391,8 @@ const BookLesson = () => {
                     </option>
                     <option value="Mondays-1.30pm Brown belts and above ">
                       1.30pm Brown belts and above
-                    </option>
+                    </option> */}
                   </Input>
-                  <ErrorMessage name="session">
-                    {msg => (
-                      <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
-                    )}
-                  </ErrorMessage>
                 </FormRow>
                 <FormRow>
                   <Label htmlFor="message">Message: </Label>
