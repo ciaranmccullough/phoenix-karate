@@ -285,9 +285,9 @@ const BookLesson = () => {
             <PageWrapper>
               <Form
                 name="contact-demo"
-                // method="post"
+                method="post"
                 data-netlify={true}
-                // data-netlify-honeypot="bot-field"
+                // data-netlify-honeypot={bot - field}
               >
                 <input type="hidden" name="form-name" value="contact-demo" />
                 <FormRow>
@@ -334,49 +334,64 @@ const BookLesson = () => {
 
                 <FormRow>
                   <Label htmlFor="session">Book Session: </Label>
-                  <Select name="session">
-                    <option value="none">none</option>
-                    <option value="Monday-5pm(Childrens-beginners)">
-                      Monday-5pm(Childrens-beginners)
+                  <Select name="session" required="">
+                    <option value="" disabled="" selected="">
+                      none
                     </option>
-                    <option value="Monday-6pm(Childrens-purple/green)">
-                      Monday-6pm(Childrens-purple/green)
+                    <option
+                      className="form-bold"
+                      value=""
+                      disabled=""
+                      selected=""
+                    >
+                      Monday
                     </option>
-                    <option value="Monday-7-30pm(Childrens-brown)">
-                      Monday-7-30pm(Childrens-brown)
+                    <option value="Monday-5pm White belt Beginners">
+                      5pm White belt Beginners
                     </option>
-                    <option value="Wednesdays-5pm(Childrens-white/purple)">
-                      Wednesdays-5pm(Childrens-white/purple)
+                    <option value="Monday-6pm Intermediates">
+                      6pm Intermediates
                     </option>
-                    <option value="Wednesdays-6pm(Childrens-green) ">
-                      Wednesdays-6pm(Childrens-green)
+                    <option value="Monday-7.30 Adults">7.30 Adults</option>
+                    <option value="" disabled="" selected="">
+                      Wednesday
                     </option>
-                    <option value="Wednesdays-7pm(Childrens-brown) ">
-                      Wednesdays-7pm(Childrens-brown)
+                    <option value="Wednesdays-5pm White belt Beginners">
+                      5pm White belt Beginners
                     </option>
-                    <option value="Fridays-6pm(Childrens-white/purple) ">
-                      Fridays-6pm(Childrens-white/purple)
+                    <option value="Wednesdays-6pm Intermediates">
+                      6pm Intermediates
                     </option>
-                    <option value="Fridays-7pm(Childrens-green/brown) ">
-                      Fridays-7pm(Childrens-green/brown)
+                    <option value="Wednesdays-7pm Brown belts and above">
+                      7pm Brown belts and above
                     </option>
-                    <option value="Saturdays-1pm(Childrens-white/purple) ">
-                      Saturdays-1pm(Childrens-white/purple)
+                    <option value="" disabled="" selected="">
+                      Friday
                     </option>
-                    <option value="Saturdays-2pm(Childrens-green/brown) ">
-                      Saturdays-2pm(Childrens-green/brown)
+                    <option value="Fridays-6pm White belt Beginners ">
+                      6pm White belt Beginners
                     </option>
-                    <option value="Sundays-11am(Childrens-white/purple) ">
-                      Sundays-11am(Childrens-white/purple)
+                    <option value="Fridays-7pm intermediates">
+                      7pm intermediates
                     </option>
-                    <option value="Sundays-12-15pm(Childrens-green/brown(red-stripe)) ">
-                      Sundays-12-15pm(Childrens-green/brown(red-stripe))
+                    <option value="" disabled="" selected="">
+                      Saturday
                     </option>
-                    <option value="Mondays-7-30pm(Adults-brown)">
-                      Mondays-7-30pm(Adults-brown)
+                    <option value="Saturdays-1pm Mixed">1pm Mixed</option>
+                    <option value="Saturdays-2pm Brown belts and above ">
+                      2pm Brown belts and above
                     </option>
-                    <option value="Wednesdays-7-30pm(Adults)">
-                      Wednesdays-7-30pm(Adults)
+                    <option value="" disabled="" selected="">
+                      Sunday
+                    </option>
+                    <option value="Sundays-11am White belt beginners">
+                      11am White belt beginners
+                    </option>
+                    <option value="Sundays-12.15 intermediates">
+                      12.15 intermediates
+                    </option>
+                    <option value="Mondays-1.30pm Brown belts and above ">
+                      1.30pm Brown belts and above
                     </option>
                   </Select>
                   <ErrorMessage name="session">
@@ -385,7 +400,6 @@ const BookLesson = () => {
                     )}
                   </ErrorMessage>
                 </FormRow>
-
                 <FormRow>
                   <Label htmlFor="message">Message: </Label>
                   <Input name="message" component="textarea" />
