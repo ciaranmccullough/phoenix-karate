@@ -231,6 +231,116 @@ const BookLesson = () => {
       .join("&")
   }
 
+  {
+    /* <option value="Monday">5pm White belt Beginners</option>
+                  <option value="Tuesday">5pm White belt Beginners</option>
+                  <option value="Wednesday">6pm</option> */
+  }
+  {
+    /* <option value="Monday-6pm Intermediates">
+                      6pm Intermediates
+                    </option>
+                    <option value="Monday-7.30 Adults">7.30 Adults</option>
+                    <option value="" disabled="" selected="">
+                      Wednesday
+                    </option>
+                    <option value="Wednesdays-5pm White belt Beginners">
+                      5pm White belt Beginners
+                    </option>
+                    <option value="Wednesdays-6pm Intermediates">
+                      6pm Intermediates
+                    </option>
+                    <option value="Wednesdays-7pm Brown belts and above">
+                      7pm Brown belts and above
+                    </option>
+                    <option value="" disabled="" selected="">
+                      Friday
+                    </option>
+                    <option value="Fridays-6pm White belt Beginners ">
+                      6pm White belt Beginners
+                    </option>
+                    <option value="Fridays-7pm intermediates">
+                      7pm intermediates
+                    </option>
+                    <option value="" disabled="" selected="">
+                      Saturday
+                    </option>
+                    <option value="Saturdays-1pm Mixed">1pm Mixed</option>
+                    <option value="Saturdays-2pm Brown belts and above ">
+                      2pm Brown belts and above
+                    </option>
+                    <option value="" disabled="" selected="">
+                      Sunday
+                    </option>
+                    <option value="Sundays-11am White belt beginners">
+                      11am White belt beginners
+                    </option>
+                    <option value="Sundays-12.15 intermediates">
+                      12.15 intermediates
+                    </option>
+                    <option value="Mondays-1.30pm Brown belts and above ">
+                      1.30pm Brown belts and above
+                    </option> */
+  }
+
+  const dropdownOptions = [
+    { key: "Select an option", value: "" },
+    { key: "Monday", value: "" },
+    {
+      key: "5pm White belt Beginners",
+      value: "Monday-5pm White belt Beginners",
+    },
+    { key: "6pm Intermediates", value: "Monday-6pm Intermediates" },
+    {
+      key: "7.30 Adults",
+      value: "Monday-7.30 Adults",
+    },
+    { key: "Wednesday", value: "" },
+    {
+      key: "5pm White belt Beginners",
+      value: "Wednesdays-5pm White belt Beginners",
+    },
+    {
+      key: "6pm Intermediates",
+      value: "Wednesdays-6pm Intermediates",
+    },
+    {
+      key: "7pm Brown belts and above",
+      value: "Wednesdays-7pm Brown belts and above",
+    },
+    { key: "Friday", value: "" },
+    {
+      key: "6pm White belt Beginners",
+      value: "Fridays-6pm White belt Beginners",
+    },
+    {
+      key: "7pm intermediates",
+      value: "Fridays-7pm intermediates",
+    },
+    { key: "Saturday", value: "" },
+    {
+      key: "1pm Mixed",
+      value: "Saturdays-1pm Mixed",
+    },
+    {
+      key: "2pm Brown belts and above",
+      value: "Saturdays-2pm Brown belts and above",
+    },
+    { key: "Sunday", value: "" },
+    {
+      key: "11am White belt beginners",
+      value: "Sundays-11am White belt beginners",
+    },
+    {
+      key: "12.15 intermediates",
+      value: "Sundays-12.15 intermediates",
+    },
+    {
+      key: "1.30pm Brown belts and above",
+      value: "Mondays-1.30pm Brown belts and above",
+    },
+  ]
+
   return (
     <Layout>
       <h1>Book A Session</h1>
@@ -334,7 +444,14 @@ const BookLesson = () => {
                 </FormRow>
 
                 <Label htmlFor="session">Book Session: </Label>
-                <select name="session">
+                <Select name="session">
+                  {dropdownOptions.map(option => {
+                    return (
+                      <option key={option.value} value={option.value}>
+                        {option.key}
+                      </option>
+                    )
+                  })}
                   {/* <option value="" disabled="" selected="">
                       none
                     </option>
@@ -346,9 +463,9 @@ const BookLesson = () => {
                     >
                       Monday
                     </option> */}
-                  <option value="Monday">5pm White belt Beginners</option>
+                  {/* <option value="Monday">5pm White belt Beginners</option>
                   <option value="Tuesday">5pm White belt Beginners</option>
-                  <option value="Wednesday">6pm</option>
+                  <option value="Wednesday">6pm</option> */}
                   {/* <option value="Monday-6pm Intermediates">
                       6pm Intermediates
                     </option>
@@ -393,7 +510,7 @@ const BookLesson = () => {
                     <option value="Mondays-1.30pm Brown belts and above ">
                       1.30pm Brown belts and above
                     </option> */}
-                </select>
+                </Select>
 
                 <FormRow>
                   <Label htmlFor="message">Message: </Label>
