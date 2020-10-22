@@ -284,12 +284,13 @@ const BookLesson = () => {
           {() => (
             <PageWrapper>
               <Form
-                name="contact-demo"
+                name="contact"
                 method="post"
-                data-netlify={true}
-                // data-netlify-honeypot={bot - field}
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="form-name" value="contact-demo" />
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact" />
                 <FormRow>
                   <Label htmlFor="name">Name: </Label>
                   <Input
@@ -332,7 +333,7 @@ const BookLesson = () => {
                   </ErrorMessage>
                 </FormRow>
 
-                <Label htmlFor="select-session">Book Session: </Label>
+                <Label htmlFor="session">Book Session: </Label>
                 <select name="session">
                   {/* <option value="" disabled="" selected="">
                       none
