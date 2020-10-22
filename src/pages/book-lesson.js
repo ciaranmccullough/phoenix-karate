@@ -364,12 +364,15 @@ const BookLesson = () => {
           />
         </div>
         <div>
-          <label htmlFor="sessions">Choose a session:</label>
+          <label htmlFor="session">Choose a session:</label>
           <select name="session" id="session-select">
             <option value="">--Please choose an option--</option>
             <option value="Monday">Monday</option>
             <option value="Wednesday">Wednesday</option>
           </select>
+        </div>
+        <div>
+          <submit type="submit">Submit</submit>
         </div>
       </form>
       <Container>
