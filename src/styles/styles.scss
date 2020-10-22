@@ -299,7 +299,22 @@ main {
   .wp-block-group h2 {
     padding: 20px 50px;
   }
+  .about-image-block {
+    display: flex;
+    align-items: center;
+    .wp-block-image img {
+      height: 300px;
+    }
+  }
 
+  .children-class-info-block,
+  .adult-class-text {
+    margin: 30px 50px;
+    padding: $padding;
+    background-color: $powder-blue;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
   .testimonial-block {
     margin: 0 50px;
     h2 {

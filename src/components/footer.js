@@ -82,8 +82,8 @@ const Footer = () => {
       <NavColumn className="footer-nav">
         <FooterLink href="/">Home</FooterLink>
         <FooterLink href="/about-us">About Us</FooterLink>
-        <FooterLink href="/childrens-classes">Children's Classes</FooterLink>
-        <FooterLink href="/adults-classes">Adult's Classes</FooterLink>
+        <FooterLink href="/children-classes">Children Classes</FooterLink>
+        <FooterLink href="/adult-classes">Adult Classes</FooterLink>
         <FooterLink href="/gallery">Gallery</FooterLink>
         <FooterLink href="/contact-us">Contact</FooterLink>
       </NavColumn>
