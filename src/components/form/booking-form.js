@@ -82,7 +82,6 @@ const BookingForm = () => {
         name: "",
         email: "",
         phone: "",
-        session: "",
         message: "",
       }}
       onSubmit={(values, actions) => {
