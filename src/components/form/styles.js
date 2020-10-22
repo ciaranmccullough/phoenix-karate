@@ -10,7 +10,7 @@ export const Container = styled.div`
   }
 `
 
-export const InputForm = styled(Form)`
+export const InputForm = styled.form`
   margin: 20px 0;
   padding: 20px;
   max-width: 950px;
@@ -81,7 +81,7 @@ export const Select = styled.select`
   }
 `
 
-export const Input = styled(Field)`
+export const Input = styled.input`
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 4px;
