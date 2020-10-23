@@ -271,6 +271,9 @@ main {
     padding: 60px;
     .wp-image-9405 {
       animation: bounce-in-top 1.1s both;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      pointer-events: none;
     }
     .has-text-align-center {
       margin-bottom: 10px;
@@ -278,6 +281,7 @@ main {
   }
   .wp-block-button__link {
     background-color: $imperial-red;
+    margin: 20px 0;
     text-transform: uppercase;
     transition: all 0.4s ease 0s;
   }
@@ -302,7 +306,7 @@ main {
   .wp-block-group h2 {
     padding: 20px 0;
   }
-  .about-image-block img {
+  .about-image-block {
     position: block;
     height: 100vh;
     width: 100%;
@@ -316,14 +320,14 @@ main {
   .wp-block-image {
     margin: 0;
   }
-  .adult-image-block img {
+  .adult-cover {
     position: block;
     height: 100vh;
     width: 100%;
     object-fit: cover;
     margin: 0;
   }
-  .children-class-image img {
+  .children-cover {
     position: block;
     height: 100vh;
     width: 100%;
@@ -380,11 +384,11 @@ main {
     background-color: $powder-blue;
     margin: 50px;
     border-radius: $border-radius;
-    padding: 20px;
+    padding: 40px;
     box-shadow: $box-shadow;
     .has-primary-color {
       color: $imperial-red;
-      padding: 20px 0;
+      margin: 0 0 20px 0;
     }
     .wp-block-group__inner-container {
       padding: 10px 0;
@@ -395,6 +399,9 @@ main {
   }
   .instructor-block {
     margin: 20px 50px;
+    .instructor-heading {
+      margin: 0;
+    }
   }
   .address-block {
     margin: 0 50px 50px 50px;
@@ -427,6 +434,7 @@ main {
   .wp-block-gallery {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+    pointer-events: none;
   }
   .features-benefits,
   .feature-columns,
@@ -437,13 +445,19 @@ main {
       color: $text-light;
       box-shadow: $box-shadow;
       border-radius: $border-radius;
-      padding: 20px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
       // align-items: center;
       h2 {
         text-align: center;
         color: $imperial-red;
+      }
+      .feature-image {
+        margin-bottom: 20px;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        pointer-events: none;
       }
       strong {
         color: $imperial-red;
@@ -478,6 +492,7 @@ main {
 
   .contact-group {
     margin: 50px;
+    min-height: 60vh;
     .bottom-paragraph {
       margin-bottom: 50px;
     }
@@ -489,6 +504,11 @@ main {
 
 .form-bold {
   font-weight: bold;
+}
+.footer-logo {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
 }
 
 // Media Quires Tablets

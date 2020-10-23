@@ -6,8 +6,8 @@ import { Container } from "../components/form/styles"
 const BookLesson = () => {
   return (
     <Layout>
+      <h1>Book A Session</h1>
       <Container>
-        <h1>Book A Session</h1>
         <BookingForm />
       </Container>
     </Layout>

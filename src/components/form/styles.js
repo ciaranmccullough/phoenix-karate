@@ -3,6 +3,7 @@ import { Form, Field } from "formik"
 
 export const Container = styled.div`
   margin: 0 50px auto;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   @media (max-width: 480px) {
@@ -10,7 +11,7 @@ export const Container = styled.div`
   }
 `
 
-export const InputForm = styled.form`
+export const InputForm = styled(Form)`
   margin: 20px 0;
   padding: 20px;
   max-width: 950px;
@@ -81,7 +82,7 @@ export const Select = styled.select`
   }
 `
 
-export const Input = styled.input`
+export const Input = styled(Field)`
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 4px;

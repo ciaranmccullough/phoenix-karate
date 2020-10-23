@@ -76,7 +76,7 @@ const Footer = () => {
         <LogoContainer
           src={logo}
           alt={author}
-          className="footer-logo"
+          className="footer-logo wp-block-gallery"
         ></LogoContainer>
       </NavColumn>
       <NavColumn className="footer-nav">
