@@ -76,7 +76,7 @@ const Footer = () => {
         <LogoContainer
           src={logo}
           alt={author}
-          className="footer-logo wp-block-gallery"
+          className="footer-logo"
         ></LogoContainer>
       </NavColumn>
       <NavColumn className="footer-nav">
@@ -86,6 +86,7 @@ const Footer = () => {
         <FooterLink href="/adults-classes">Adult Classes</FooterLink>
         <FooterLink href="/gallery">Gallery</FooterLink>
         <FooterLink href="/contact-us">Contact</FooterLink>
+        <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
       </NavColumn>
       <SocialColumn>
         <FooterLink href="https://www.facebook.com/Phoenix-Karate-School-103751281081376">

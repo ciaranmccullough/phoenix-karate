@@ -490,6 +490,10 @@ main {
     border: 1px solid black;
   }
 
+  .privacy-block {
+    margin: 30px 50px;
+  }
+
   .contact-group {
     margin: 50px;
     min-height: 60vh;
@@ -538,6 +542,7 @@ main {
     .instructor-header {
       margin: 0 auto;
     }
+
     h2 {
       margin: 0 25px;
     }
@@ -548,11 +553,13 @@ main {
     .mission-statement,
     .about-block,
     .features-benefits,
+    .feature-columns,
     .children-class-info-block,
     .about-block,
     .features-block,
     .instructor-block,
-    .contact-group {
+    .contact-group,
+    .privacy-block {
       margin: 20px 25px;
     }
 
