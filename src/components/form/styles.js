@@ -3,7 +3,7 @@ import { Form, Field } from "formik"
 
 export const Container = styled.div`
   margin: 0 50px auto;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   @media (max-width: 480px) {
@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 
 export const InputForm = styled(Form)`
-  margin: 20px 0;
+  margin: 40px 0;
   padding: 20px;
   max-width: 950px;
   min-width: 250px;

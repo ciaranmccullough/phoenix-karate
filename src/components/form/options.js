@@ -1,5 +1,8 @@
 export const options = [
-  { key: "Select an option", value: "" },
+  {
+    key: "Select an option",
+    value: "",
+  },
   { key: "Monday", value: "" },
   {
     key: "5pm White belt Beginners",
@@ -10,7 +13,7 @@ export const options = [
     key: "7.30 Adults",
     value: "Monday-7.30 Adults",
   },
-  { key: "Wednesday", value: "" },
+  { key: "Wednesday", value: "", disabled: "disabled" },
   {
     key: "5pm White belt Beginners",
     value: "Wednesdays-5pm White belt Beginners",
@@ -23,7 +26,7 @@ export const options = [
     key: "7pm Brown belts and above",
     value: "Wednesdays-7pm Brown belts and above",
   },
-  { key: "Friday", value: "" },
+  { key: "Friday", value: "", disabled: "disabled" },
   {
     key: "6pm White belt Beginners",
     value: "Fridays-6pm White belt Beginners",
@@ -32,7 +35,7 @@ export const options = [
     key: "7pm intermediates",
     value: "Fridays-7pm intermediates",
   },
-  { key: "Saturday", value: "" },
+  { key: "Saturday", value: "", disabled: "disabled" },
   {
     key: "1pm Mixed",
     value: "Saturdays-1pm Mixed",
@@ -41,7 +44,7 @@ export const options = [
     key: "2pm Brown belts and above",
     value: "Saturdays-2pm Brown belts and above",
   },
-  { key: "Sunday", value: "" },
+  { key: "Sunday", value: "", disabled: "disabled" },
   {
     key: "11am White belt beginners",
     value: "Sundays-11am White belt beginners",

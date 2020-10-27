@@ -40,7 +40,7 @@ const BookingForm = () => {
         handleServerResponse(true, alert("Success"), form)
       })
       .catch(r => {
-        handleServerResponse(false, r.response.data.error, form)
+        handleServerResponse(false, alert("Error"), form)
       })
   }
 
@@ -76,12 +76,24 @@ const BookingForm = () => {
         return errors
       }}
     >
-      {() => (
+      {({
+        values,
+        touched,
+        errors,
+        dirty,
+        isSubmitting,
+        isValid,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        handleReset,
+      }) => (
         <InputForm onSubmit={handleOnSubmit}>
           <FormRow>
             <Label htmlFor="name">Name: </Label>
             <Input
               name="name"
+              required="required"
               // valid={touched.name && !errors.name}
               // error={touched.name && errors.name}
             />
@@ -95,6 +107,7 @@ const BookingForm = () => {
             <Label htmlFor="email">Email: </Label>
             <Input
               name="email"
+              required="required"
               // valid={touched.email && !errors.email}
               // error={touched.email && errors.email}
             />
@@ -108,6 +121,7 @@ const BookingForm = () => {
             <Label htmlFor="phone">Phone: </Label>
             <Input
               name="phone"
+              required="required"
               // valid={touched.phone && !errors.phone}
               // error={touched.phone && errors.phone}
             />
@@ -119,7 +133,7 @@ const BookingForm = () => {
           </FormRow>
           <FormRow>
             <Label htmlFor="session">Book Session: </Label>
-            <Select name="session">
+            <Select name="session" required="required">
               {options.map(option => {
                 return (
                   <option key={option.value} value={option.value}>
@@ -128,10 +142,15 @@ const BookingForm = () => {
                 )
               })}
             </Select>
+            <ErrorMessage name="session">
+              {msg => (
+                <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
+              )}
+            </ErrorMessage>
           </FormRow>
           <FormRow>
             <Label htmlFor="message">Message: </Label>
-            <Input name="message" component="textarea" />
+            <Input name="message" required="required" component="textarea" />
             <ErrorMessage name="message">
               {msg => (
                 <StyledInlineErrorMessage>{msg}</StyledInlineErrorMessage>
@@ -139,7 +158,9 @@ const BookingForm = () => {
             </ErrorMessage>
           </FormRow>
           <FormRow>
-            <Submit type="submit">Submit</Submit>
+            <Submit type="submit" disabled={!(dirty && isValid)}>
+              Submit
+            </Submit>
           </FormRow>
           <FormRow>
             {serverState.status && (
