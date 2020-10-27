@@ -459,6 +459,9 @@ main {
         -webkit-touch-callout: none;
         pointer-events: none;
       }
+      .feature-column a {
+        text-decoration: underline;
+      }
       strong {
         color: $imperial-red;
       }
@@ -496,14 +499,17 @@ main {
 
   .contact-group {
     margin: 50px;
-    min-height: 60vh;
+
     .bottom-paragraph {
-      margin-bottom: 50px;
     }
   }
-  // .instagram-container {
-  //   margin: 0 50px;
-  // }
+  iframe {
+    width: 80vw;
+    margin: 0 50px 50px;
+  }
+  .instagram-container {
+    margin: 0 10px;
+  }
 }
 
 .form-bold {

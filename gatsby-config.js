@@ -24,6 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-fontawesome-css`,
     },
+
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
