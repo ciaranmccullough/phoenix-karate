@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 
 export const InputForm = styled(Form)`
-  margin: 40px 0;
+  margin: 50px 0;
   padding: 20px;
   max-width: 950px;
   min-width: 250px;

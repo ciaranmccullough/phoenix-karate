@@ -11,9 +11,25 @@ require("dotenv").config({
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Phoenix Karate`,
+    description: `Karate School in London`,
+    author: `@phoenixkarate`,
+    wordPressUrl: `https://phoenixkarate.net`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-plugin-sharp`,
@@ -48,6 +64,15 @@ module.exports = {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
         url: `${process.env.GATSBY_API_URL}/graphql`,
+      },
+    },
+    {
+      resolve: "gatsby-wpgraphql-inline-images",
+      options: {
+        wordPressUrl: `https://api.phoenixkarate.net`,
+        uploadsUrl: `https://api.phoenixkarate.net/wp-content/uploads`,
+        processPostTypes: ["Page", "Post"],
+        graphqlTypeName: `WPGraphQL`,
       },
     },
     {

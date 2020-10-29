@@ -336,11 +336,16 @@ main {
   }
   .children-class-info-block,
   .adult-class-text {
-    margin: 30px 50px;
-    padding: $padding;
+    margin: 30px 50px 50px;
+    padding: 10px 30px;
     background-color: $powder-blue;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
+    .children-class-info-block-heading,
+    .adult-class-text-heading {
+      margin: 0;
+      color: $imperial-red;
+    }
   }
   .testimonial-block {
     margin: 0 50px;
@@ -405,10 +410,19 @@ main {
   }
   .address-block {
     margin: 0 50px 50px 50px;
-    .wp-block-column {
-      h2 {
-        word-break: normal;
+
+    .address-column {
+      background-color: $prussian-blue;
+      color: $text-light;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      strong {
+        color: $imperial-red;
       }
+
       p {
         margin: 10px 40px;
       }
@@ -437,8 +451,7 @@ main {
     pointer-events: none;
   }
   .features-benefits,
-  .feature-columns,
-  .address-block {
+  .feature-columns {
     margin: 20px 50px 30px;
     .feature-column {
       background-color: $prussian-blue;
@@ -448,19 +461,22 @@ main {
       padding: 30px;
       display: flex;
       flex-direction: column;
-      // align-items: center;
+      min-height: 580px;
       h2 {
         text-align: center;
         color: $imperial-red;
       }
       .feature-image {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         pointer-events: none;
       }
       .feature-column a {
         text-decoration: underline;
+      }
+      .feature-column-para {
+        margin-bottom: 20px;
       }
       strong {
         color: $imperial-red;
