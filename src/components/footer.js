@@ -84,7 +84,6 @@ const Footer = () => {
         <FooterLink href="/about-us">About Us</FooterLink>
         <FooterLink href="/childrens-classes">Children Classes</FooterLink>
         <FooterLink href="/adults-classes">Adult Classes</FooterLink>
-        <FooterLink href="/gallery">Gallery</FooterLink>
         <FooterLink href="/contact-us">Contact</FooterLink>
         <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
       </NavColumn>
