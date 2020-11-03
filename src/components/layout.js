@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import CookieConsent, { Cookies } from "react-cookie-consent"
+import CookieConsent from "react-cookie-consent"
 // import UnderConstruction from "./underConstruction"
 
 import "@wordpress/block-library/build-style/style.css"

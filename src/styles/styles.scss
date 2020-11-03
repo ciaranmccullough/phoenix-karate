@@ -505,6 +505,57 @@ main {
     }
   }
 
+  .mobile-instagram-block {
+    display: none;
+  }
+
+  .instagram-block {
+    margin: 50px;
+    padding: 20px 50px;
+
+    background-color: $celadon-blue;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    .instagram-block-heading {
+      margin: 0;
+      padding: 20px 0;
+      color: $text-light;
+      font-size: 2.25em;
+    }
+    .display-grid {
+      margin: 10px 0;
+      display: grid;
+      justify-content: center;
+      // grid-template-columns: repeat(4, 1fr);
+      .kona-image-wrapper {
+        border: 5px solid $imperial-red;
+        background: $text-light;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .kona-image {
+        position: relative;
+        text-align: center;
+        margin-bottom: 10px;
+        // margin: 10px;
+        width: 80%;
+        height: 80%;
+        // display: grid;
+        // align-items: center;
+        // justify-content: center;
+        .kona-image-overlay {
+          margin-bottom: 10px;
+          .kona-image-caption-text {
+            margin: 20px;
+          }
+        }
+      }
+    }
+  }
+
   .wp-image-9294 {
     border: 1px solid black;
   }
@@ -550,6 +601,33 @@ main {
     .instagram-heading {
       display: none;
     }
+    .instagram-block {
+      display: none;
+    }
+    .mobile-instagram-block {
+      margin: 50px;
+      padding: 20px;
+      display: grid;
+      background-color: $celadon-blue;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+      .instagram-block-heading {
+        margin: 0;
+        padding: 20px 0 30px;
+        color: $text-light;
+        font-size: 2.25em;
+      }
+      .kona-image-wrapper {
+        color: white;
+        .kona-image {
+          margin-bottom: 10px;
+          border: 5px solid $imperial-red;
+        }
+        .kona-image-overlay {
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
 }
 
@@ -578,7 +656,8 @@ main {
     .features-block,
     .instructor-block,
     .contact-group,
-    .privacy-block {
+    .privacy-block,
+    .mobile-instagram-block {
       margin: 20px 25px;
     }
 
