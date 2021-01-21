@@ -231,7 +231,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1920px;
   min-height: 100vh;
 }
 
@@ -250,6 +251,34 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+
+// Typography System
+h1,
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+p,
+li,
+a {
+  font-size: 1.5rem;
 }
 
 a {
@@ -336,6 +365,10 @@ main {
       margin-bottom: 10px;
     }
   }
+  .wp-block-group__inner-container h2 {
+    display: flex;
+    flex-direction: column;
+  }
   .wp-block-button__link {
     background-color: $imperial-red;
     margin: 20px 0;
@@ -360,6 +393,7 @@ main {
       padding: 0;
     }
   }
+
   .wp-block-group h2 {
     padding: 20px 0;
   }
@@ -427,6 +461,9 @@ main {
   }
   .testimonial-block {
     margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       margin: 0;
       color: $prussian-blue;
@@ -457,6 +494,7 @@ main {
     margin: 0 50px 50px;
     .has-large-font-size {
       margin: 0;
+      font-size: 3.2rem;
     }
     p {
       padding: 20px;
@@ -482,7 +520,7 @@ main {
     }
   }
   .instructor-block {
-    margin: 20px 50px;
+    margin: 20px 50px 50px 50px;
     .instructor-heading {
       margin: 0;
     }
@@ -574,7 +612,7 @@ main {
       margin: 0;
       padding: 20px 0;
       color: $text-light;
-      font-size: 2.25em;
+      font-size: 3.2rem;
     }
     .display-grid {
       margin: 10px 0;
@@ -649,6 +687,11 @@ main {
       .wp-block-column {
         margin-left: 0;
         margin-bottom: 50px;
+        .wp-block-image {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
     .instagram-container,
@@ -692,6 +735,9 @@ main {
     justify-content: center;
     .instructor-header {
       margin: 0 auto;
+    }
+    .mission-statement {
+      display: none;
     }
 
     h2 {
