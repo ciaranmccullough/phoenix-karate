@@ -15,7 +15,7 @@ module.exports = {
     title: `Phoenix Karate`,
     description: `Karate School in London`,
     author: `@phoenixkarate`,
-    wordPressUrl: `https://phoenixkarate.net`,
+    wordPressUrl: `https://api.phoenixkarate.net`,
   },
   plugins: [
     {
