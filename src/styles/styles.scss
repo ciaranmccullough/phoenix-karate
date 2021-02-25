@@ -449,13 +449,19 @@ main {
   .children-class-info-block,
   .adult-class-text {
     margin: 30px 50px 50px;
-    padding: 10px 30px;
+    padding: 30px;
     background-color: $powder-blue;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    .children-class-info-block-heading,
-    .adult-class-text-heading {
+    .children-class-info-block-heading {
       margin: 0;
+      padding: 0;
+      color: $imperial-red;
+      margin-bottom: 20px;
+    }
+    .adult-class-text-heading {
+      margin: 0 0 20px 0;
+      padding: 0;
       color: $imperial-red;
     }
   }
@@ -495,6 +501,7 @@ main {
     .has-large-font-size {
       margin: 0;
       font-size: 3.2rem;
+      padding-left: 30px;
     }
     p {
       padding: 20px;
@@ -505,15 +512,15 @@ main {
     background-color: $powder-blue;
     margin: 50px;
     border-radius: $border-radius;
-    padding: 40px;
+    padding: 30px;
     box-shadow: $box-shadow;
 
     .has-primary-color {
       color: $imperial-red;
       margin: 0 0 20px 0;
+      padding: 0;
     }
     .wp-block-group__inner-container {
-      padding: 10px 0;
       .wp-block-column p {
         margin: 0;
       }
@@ -620,9 +627,11 @@ main {
       justify-content: center;
       // grid-template-columns: repeat(4, 1fr);
       .kona-image-wrapper {
-        border: 5px solid $imperial-red;
+        border: 10px solid $imperial-red;
         background: $text-light;
         padding: 10px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
