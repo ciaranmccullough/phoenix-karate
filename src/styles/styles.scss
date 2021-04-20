@@ -802,6 +802,16 @@ main {
   font-size: 1.5rem;
 }
 
+// Button center fix
+.is-content-justification-center {
+  display: flex;
+  justify-content: center;
+}
+
+#rcc-confirm-button {
+  background-color: #e63946ff;
+}
+
 // Under Construction Page
 // .uc-container {
 //   background-color: $celadon-blue;
